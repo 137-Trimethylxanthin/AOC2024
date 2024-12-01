@@ -1,0 +1,90 @@
+
+func part1(path){
+    if (!File.exists(path)){
+        System.print("No file");
+        System.exit(5);
+    }
+
+    var f = File.open(path, "r");
+
+
+    var left = [];
+    var right = [];
+    
+    while (!f.eof()) {
+        var line = f.read("\n");
+        var part = line.split("   ");
+        left.push(part[0].number());
+        right.push(part[1].number());
+    }
+    f.close();
+
+    left.sort();
+    right.sort();
+
+    if (left.count != right.count){
+        System.print("Wrong input");
+        System.exit(5);
+    }
+    var sum = 0;
+
+    while (left.count != 0 && right.count != 0){
+        sum += Math.abs(left.pop() - right.pop())
+    }
+
+    return sum
+}
+
+func part2(path){
+    if (!File.exists(path)){
+        System.print("No file");
+        System.exit(5);
+    }
+
+    var f = File.open(path, "r");
+
+
+    var left = [];
+    var right = [];
+    
+    while (!f.eof()) {
+        var line = f.read("\n");
+        var part = line.split("   ");
+        left.push(part[0].number());
+        right.push(part[1].number());
+    }
+    f.close();
+
+    left.sort();
+    right.sort();
+
+    if (left.count != right.count){
+        System.print("Wrong input");
+        System.exit(5);
+    }
+    var sum = 0;
+
+    for (var i in left){
+
+        var count = 0;
+        for (var j in right){
+            if (i == j){
+                count += 1;
+            }
+        }
+        sum += count * i;
+    }
+
+    return sum
+}
+
+
+func main() {
+    System.print("Hello World!");
+    var part1 = part1("inputs/real/day1.txt")
+    System.print("part1: " + part1);
+    var part2 = part2("inputs/real/day1.txt")
+    System.print("part2: " + part2);
+
+
+}
