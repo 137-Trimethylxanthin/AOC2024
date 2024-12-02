@@ -81,9 +81,9 @@ func part2(path){
 
 func main() {
     System.print("Hello World!");
-    var part1 = part1("inputs/real/day1.txt")
+    var part1 = part1("Sources/inputs/real/day1.txt")
     System.print("part1: " + part1);
-    var part2 = part2("inputs/real/day1.txt")
+    var part2 = part2("Sources/inputs/real/day1.txt")
     System.print("part2: " + part2);
 
 
