@@ -15,6 +15,12 @@ case 3:
     day3.solvePart1()
     print("\nDay 3 Part 2 Solution:")
     day3.solvePart2()
+case 4:
+    let day4 = Day4()
+    print("Day 4 Part 1 Solution:")
+    day4.solvePart1()
+    print("\nDay 4 Part 2 Solution:")
+    day4.solvePart2()
 default:
     print("Solution for Day \(day) not implemented")
 }
